@@ -7,15 +7,12 @@
 #include <stdlib.h>
 
 Matrix *draw_chunk_transforms[CUBE_N_ENUMS];
-bool chunk_transforms_generated;
 int transform_lengths[CUBE_N_ENUMS];
 
 void generate_matrix_transforms(int cx, int cy)
 {
     int x, y, z, i, cube;
     Vector3 cube_pos;
-    if (chunk_transforms_generated) return;
-    chunk_transforms_generated = true;
     
     for (i = 0; i < CUBE_N_ENUMS; i++)
     {
